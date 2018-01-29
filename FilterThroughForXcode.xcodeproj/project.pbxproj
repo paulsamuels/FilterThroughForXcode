@@ -20,6 +20,12 @@
 		1124923F201DEEBF009D69B2 /* FilterThroughExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11249236201DEEBF009D69B2 /* FilterThroughExtension.swift */; };
 		11249240201DEEBF009D69B2 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11249238201DEEBF009D69B2 /* Command.swift */; };
 		11249241201DEEBF009D69B2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11249239201DEEBF009D69B2 /* Result.swift */; };
+		11249251201DF09C009D69B2 /* ShellRunner.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = 11249246201DF09C009D69B2 /* ShellRunner.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		11249263201DF0EC009D69B2 /* ShellRunner.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = 11249246201DF09C009D69B2 /* ShellRunner.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1155D5F3201FCEB8003E684E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1155D5ED201FCEB8003E684E /* main.swift */; };
+		1155D5F4201FCEB8003E684E /* Invoker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1155D5EF201FCEB8003E684E /* Invoker.swift */; };
+		1155D5F5201FCEB8003E684E /* ConcreteInvoker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1155D5F1201FCEB8003E684E /* ConcreteInvoker.swift */; };
+		1155D5F6201FCEB8003E684E /* XPCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1155D5F2201FCEB8003E684E /* XPCDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +35,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1124921B201DEEA2009D69B2;
 			remoteInfo = Extension;
+		};
+		1124924F201DF09C009D69B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 112491FF201DEE6A009D69B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 11249245201DF09C009D69B2;
+			remoteInfo = ShellRunner;
+		};
+		11249260201DF0DC009D69B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 112491FF201DEE6A009D69B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 11249245201DF09C009D69B2;
+			remoteInfo = ShellRunner;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -42,6 +62,27 @@
 				11249229201DEEA2009D69B2 /* Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11249255201DF09C009D69B2 /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				11249251201DF09C009D69B2 /* ShellRunner.xpc in Embed XPC Services */,
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11249262201DF0E5009D69B2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				11249263201DF0EC009D69B2 /* ShellRunner.xpc in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -65,6 +106,13 @@
 		11249236201DEEBF009D69B2 /* FilterThroughExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterThroughExtension.swift; sourceTree = "<group>"; };
 		11249238201DEEBF009D69B2 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		11249239201DEEBF009D69B2 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		11249246201DF09C009D69B2 /* ShellRunner.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = ShellRunner.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		1124924E201DF09C009D69B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1155D5EB201FCBCD003E684E /* ShellRunner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShellRunner.entitlements; sourceTree = "<group>"; };
+		1155D5ED201FCEB8003E684E /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		1155D5EF201FCEB8003E684E /* Invoker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Invoker.swift; sourceTree = "<group>"; };
+		1155D5F1201FCEB8003E684E /* ConcreteInvoker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcreteInvoker.swift; sourceTree = "<group>"; };
+		1155D5F2201FCEB8003E684E /* XPCDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XPCDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +141,7 @@
 				11249209201DEE6A009D69B2 /* FilterThroughForXcode */,
 				1124921D201DEEA2009D69B2 /* Frameworks */,
 				11249208201DEE6A009D69B2 /* Products */,
+				11249247201DF09C009D69B2 /* ShellRunner */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +150,7 @@
 			children = (
 				11249207201DEE6A009D69B2 /* FilterThroughForXcode.app */,
 				1124921C201DEEA2009D69B2 /* Extension.appex */,
+				11249246201DF09C009D69B2 /* ShellRunner.xpc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,6 +224,43 @@
 			path = Types;
 			sourceTree = "<group>";
 		};
+		11249247201DF09C009D69B2 /* ShellRunner */ = {
+			isa = PBXGroup;
+			children = (
+				1124924E201DF09C009D69B2 /* Info.plist */,
+				1155D5EB201FCBCD003E684E /* ShellRunner.entitlements */,
+				1155D5EC201FCEB8003E684E /* Source */,
+			);
+			path = ShellRunner;
+			sourceTree = "<group>";
+		};
+		1155D5EC201FCEB8003E684E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				1155D5ED201FCEB8003E684E /* main.swift */,
+				1155D5EE201FCEB8003E684E /* Protocols */,
+				1155D5F0201FCEB8003E684E /* Types */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		1155D5EE201FCEB8003E684E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1155D5EF201FCEB8003E684E /* Invoker.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		1155D5F0201FCEB8003E684E /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				1155D5F1201FCEB8003E684E /* ConcreteInvoker.swift */,
+				1155D5F2201FCEB8003E684E /* XPCDelegate.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -185,11 +272,13 @@
 				11249204201DEE6A009D69B2 /* Frameworks */,
 				11249205201DEE6A009D69B2 /* Resources */,
 				1124922D201DEEA2009D69B2 /* Embed App Extensions */,
+				11249255201DF09C009D69B2 /* Embed XPC Services */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				11249228201DEEA2009D69B2 /* PBXTargetDependency */,
+				11249250201DF09C009D69B2 /* PBXTargetDependency */,
 			);
 			name = FilterThroughForXcode;
 			productName = FilterThroughForXcode;
@@ -202,16 +291,32 @@
 			buildPhases = (
 				11249218201DEEA2009D69B2 /* Sources */,
 				11249219201DEEA2009D69B2 /* Frameworks */,
-				1124921A201DEEA2009D69B2 /* Resources */,
+				11249262201DF0E5009D69B2 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				11249261201DF0DC009D69B2 /* PBXTargetDependency */,
 			);
 			name = Extension;
 			productName = Extension;
 			productReference = 1124921C201DEEA2009D69B2 /* Extension.appex */;
 			productType = "com.apple.product-type.xcode-extension";
+		};
+		11249245201DF09C009D69B2 /* ShellRunner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11249252201DF09C009D69B2 /* Build configuration list for PBXNativeTarget "ShellRunner" */;
+			buildPhases = (
+				11249242201DF09C009D69B2 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShellRunner;
+			productName = ShellRunner;
+			productReference = 11249246201DF09C009D69B2 /* ShellRunner.xpc */;
+			productType = "com.apple.product-type.xpc-service";
 		};
 /* End PBXNativeTarget section */
 
@@ -231,6 +336,16 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
+					11249245201DF09C009D69B2 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
 				};
 			};
 			buildConfigurationList = 11249202201DEE6A009D69B2 /* Build configuration list for PBXProject "FilterThroughForXcode" */;
@@ -248,6 +363,7 @@
 			targets = (
 				11249206201DEE6A009D69B2 /* FilterThroughForXcode */,
 				1124921B201DEEA2009D69B2 /* Extension */,
+				11249245201DF09C009D69B2 /* ShellRunner */,
 			);
 		};
 /* End PBXProject section */
@@ -259,13 +375,6 @@
 			files = (
 				1124920D201DEE6A009D69B2 /* Assets.xcassets in Resources */,
 				11249210201DEE6A009D69B2 /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1124921A201DEEA2009D69B2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +404,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		11249242201DF09C009D69B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1155D5F4201FCEB8003E684E /* Invoker.swift in Sources */,
+				1155D5F5201FCEB8003E684E /* ConcreteInvoker.swift in Sources */,
+				1155D5F6201FCEB8003E684E /* XPCDelegate.swift in Sources */,
+				1155D5F3201FCEB8003E684E /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -302,6 +422,16 @@
 			isa = PBXTargetDependency;
 			target = 1124921B201DEEA2009D69B2 /* Extension */;
 			targetProxy = 11249227201DEEA2009D69B2 /* PBXContainerItemProxy */;
+		};
+		11249250201DF09C009D69B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 11249245201DF09C009D69B2 /* ShellRunner */;
+			targetProxy = 1124924F201DF09C009D69B2 /* PBXContainerItemProxy */;
+		};
+		11249261201DF0DC009D69B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 11249245201DF09C009D69B2 /* ShellRunner */;
+			targetProxy = 11249260201DF0DC009D69B2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -489,6 +619,41 @@
 			};
 			name = Release;
 		};
+		11249253201DF09C009D69B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QSEBZ873KY;
+				INFOPLIST_FILE = ShellRunner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.paul-samuels.filter-through.shell-runner";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		11249254201DF09C009D69B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QSEBZ873KY;
+				INFOPLIST_FILE = ShellRunner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.paul-samuels.filter-through.shell-runner";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -515,6 +680,15 @@
 			buildConfigurations = (
 				1124922B201DEEA2009D69B2 /* Debug */,
 				1124922C201DEEA2009D69B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11249252201DF09C009D69B2 /* Build configuration list for PBXNativeTarget "ShellRunner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11249253201DF09C009D69B2 /* Debug */,
+				11249254201DF09C009D69B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
