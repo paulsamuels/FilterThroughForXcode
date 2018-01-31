@@ -97,7 +97,7 @@ private extension FilterThroughCommand {
                 if success {
                     standardOutput.fileHandleForWriting.closeFile()
                     if let replacement = String(data: standardOutputBuffer, encoding: .utf8) {
-                        completion(.success(replacement.trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: "\n")))
+                        completion(.success(replacement.components(separatedBy: "\n").map({ $0.removingTrailingWhitespace() })))
                     }
                 } else {
                     standardError.fileHandleForWriting.closeFile()

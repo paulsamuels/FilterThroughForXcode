@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		111AC4F52021BAA2004CF3BA /* String+RemoveWhitespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111AC4F42021BAA2004CF3BA /* String+RemoveWhitespace.swift */; };
 		1124920B201DEE6A009D69B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1124920A201DEE6A009D69B2 /* AppDelegate.swift */; };
 		1124920D201DEE6A009D69B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1124920C201DEE6A009D69B2 /* Assets.xcassets */; };
 		11249210201DEE6A009D69B2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1124920E201DEE6A009D69B2 /* MainMenu.xib */; };
@@ -87,6 +88,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		111AC4F42021BAA2004CF3BA /* String+RemoveWhitespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+RemoveWhitespace.swift"; sourceTree = "<group>"; };
 		11249207201DEE6A009D69B2 /* FilterThroughForXcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilterThroughForXcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1124920A201DEE6A009D69B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1124920C201DEE6A009D69B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -132,6 +134,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		111AC4F32021BA8C004CF3BA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				111AC4F42021BAA2004CF3BA /* String+RemoveWhitespace.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		112491FE201DEE6A009D69B2 = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				1124922F201DEEBF009D69B2 /* Errors */,
+				111AC4F32021BA8C004CF3BA /* Extensions */,
 				11249235201DEEBF009D69B2 /* FilterThroughCommand.swift */,
 				11249236201DEEBF009D69B2 /* FilterThroughExtension.swift */,
 				11249237201DEEBF009D69B2 /* Types */,
@@ -387,6 +398,7 @@
 				1124923B201DEEBF009D69B2 /* FilterThroughCommandError.swift in Sources */,
 				11249240201DEEBF009D69B2 /* Command.swift in Sources */,
 				1124923C201DEEBF009D69B2 /* PipeError.swift in Sources */,
+				111AC4F52021BAA2004CF3BA /* String+RemoveWhitespace.swift in Sources */,
 				11249241201DEEBF009D69B2 /* Result.swift in Sources */,
 				1124923A201DEEBF009D69B2 /* CommandError.swift in Sources */,
 			);
